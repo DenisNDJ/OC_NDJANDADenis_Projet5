@@ -1,0 +1,1421 @@
+{
+  "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\polyfills.ts": {
+    "path": "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\polyfills.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {},
+    "inputSourceMap": {
+      "version": 3,
+      "names": [],
+      "sources": [
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\polyfills.ts"
+      ],
+      "sourcesContent": [
+        "/**\r\n * This file includes polyfills needed by Angular and is loaded before the app.\r\n * You can add your own extra polyfills to this file.\r\n *\r\n * This file is divided into 2 sections:\r\n *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.\r\n *   2. Application imports. Files imported after ZoneJS that should be loaded before your main\r\n *      file.\r\n *\r\n * The current setup is for so-called \"evergreen\" browsers; the last versions of browsers that\r\n * automatically update themselves. This includes recent versions of Safari, Chrome (including\r\n * Opera), Edge on the desktop, and iOS and Chrome on mobile.\r\n *\r\n * Learn more in https://angular.io/guide/browser-support\r\n */\r\n\r\n/***************************************************************************************************\r\n * BROWSER POLYFILLS\r\n */\r\n\r\n/**\r\n * By default, zone.js will patch all possible macroTask and DomEvents\r\n * user can disable parts of macroTask/DomEvents patch by setting following flags\r\n * because those flags need to be set before `zone.js` being loaded, and webpack\r\n * will put import in the top of bundle, so user need to create a separate file\r\n * in this directory (for example: zone-flags.ts), and put the following flags\r\n * into that file, and then add the following code before importing zone.js.\r\n * import './zone-flags';\r\n *\r\n * The flags allowed in zone-flags.ts are listed here.\r\n *\r\n * The following flags will work for all browsers.\r\n *\r\n * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame\r\n * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick\r\n * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames\r\n *\r\n *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js\r\n *  with the following flag, it will bypass `zone.js` patch for IE/Edge\r\n *\r\n *  (window as any).__Zone_enable_cross_context_check = true;\r\n *\r\n */\r\n\r\n/***************************************************************************************************\r\n * Zone JS is required by default for Angular itself.\r\n */\r\nimport 'zone.js';  // Included with Angular CLI.\r\n\r\n\r\n/***************************************************************************************************\r\n * APPLICATION IMPORTS\r\n */\r\n"
+      ],
+      "mappings": "AAAA;;;;;;;;;;;;;;;AAgBA;;;AAIA;;;;;;;;;;;;;;;;;;;;;;;AAwBA;;;AAGA,OAAO,SAAS,CAAC,CAAE;AAGnB",
+      "ignoreList": []
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "afed729c5bc49ac3b0bfb1db4f5bbfaa42c2bd9f"
+  },
+  "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\pages\\home\\home.component.ts": {
+    "path": "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\pages\\home\\home.component.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 40
+        },
+        "end": {
+          "line": 44,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 8,
+          "column": 6
+        },
+        "end": {
+          "line": 8,
+          "column": 65
+        }
+      },
+      "2": {
+        "start": {
+          "line": 11,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 8
+        }
+      },
+      "3": {
+        "start": {
+          "line": 12,
+          "column": 8
+        },
+        "end": {
+          "line": 12,
+          "column": 58
+        }
+      },
+      "4": {
+        "start": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 40,
+          "column": 9
+        }
+      },
+      "5": {
+        "start": {
+          "line": 24,
+          "column": 10
+        },
+        "end": {
+          "line": 36,
+          "column": 11
+        }
+      },
+      "6": {
+        "start": {
+          "line": 25,
+          "column": 12
+        },
+        "end": {
+          "line": 25,
+          "column": 43
+        }
+      },
+      "7": {
+        "start": {
+          "line": 26,
+          "column": 12
+        },
+        "end": {
+          "line": 26,
+          "column": 38
+        }
+      },
+      "8": {
+        "start": {
+          "line": 27,
+          "column": 12
+        },
+        "end": {
+          "line": 27,
+          "column": 39
+        }
+      },
+      "9": {
+        "start": {
+          "line": 28,
+          "column": 12
+        },
+        "end": {
+          "line": 28,
+          "column": 43
+        }
+      },
+      "10": {
+        "start": {
+          "line": 29,
+          "column": 12
+        },
+        "end": {
+          "line": 29,
+          "column": 30
+        }
+      },
+      "11": {
+        "start": {
+          "line": 30,
+          "column": 12
+        },
+        "end": {
+          "line": 30,
+          "column": 46
+        }
+      },
+      "12": {
+        "start": {
+          "line": 31,
+          "column": 12
+        },
+        "end": {
+          "line": 33,
+          "column": 15
+        }
+      },
+      "13": {
+        "start": {
+          "line": 32,
+          "column": 14
+        },
+        "end": {
+          "line": 32,
+          "column": 33
+        }
+      },
+      "14": {
+        "start": {
+          "line": 34,
+          "column": 12
+        },
+        "end": {
+          "line": 34,
+          "column": 38
+        }
+      },
+      "15": {
+        "start": {
+          "line": 35,
+          "column": 12
+        },
+        "end": {
+          "line": 35,
+          "column": 32
+        }
+      },
+      "16": {
+        "start": {
+          "line": 43,
+          "column": 2
+        },
+        "end": {
+          "line": 43,
+          "column": 23
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 3,
+            "column": 41
+          },
+          "end": {
+            "line": 3,
+            "column": 42
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 47
+          },
+          "end": {
+            "line": 44,
+            "column": 1
+          }
+        },
+        "line": 3
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 4
+          },
+          "end": {
+            "line": 5,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 18
+          },
+          "end": {
+            "line": 5,
+            "column": 20
+          }
+        },
+        "line": 5
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 6,
+            "column": 4
+          },
+          "end": {
+            "line": 6,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 15
+          },
+          "end": {
+            "line": 6,
+            "column": 17
+          }
+        },
+        "line": 6
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": {
+          "start": {
+            "line": 7,
+            "column": 4
+          },
+          "end": {
+            "line": 7,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 12
+          },
+          "end": {
+            "line": 9,
+            "column": 5
+          }
+        },
+        "line": 7
+      },
+      "4": {
+        "name": "HomeComponent_Factory",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 27
+          },
+          "end": {
+            "line": 11,
+            "column": 48
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 68
+          },
+          "end": {
+            "line": 13,
+            "column": 7
+          }
+        },
+        "line": 11
+      },
+      "5": {
+        "name": "HomeComponent_Template",
+        "decl": {
+          "start": {
+            "line": 23,
+            "column": 27
+          },
+          "end": {
+            "line": 23,
+            "column": 49
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 59
+          },
+          "end": {
+            "line": 37,
+            "column": 9
+          }
+        },
+        "line": 23
+      },
+      "6": {
+        "name": "HomeComponent_Template_button_click_4_listener",
+        "decl": {
+          "start": {
+            "line": 31,
+            "column": 44
+          },
+          "end": {
+            "line": 31,
+            "column": 90
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 31,
+            "column": 93
+          },
+          "end": {
+            "line": 33,
+            "column": 13
+          }
+        },
+        "line": 31
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 20
+          },
+          "end": {
+            "line": 12,
+            "column": 54
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 12,
+              "column": 20
+            },
+            "end": {
+              "line": 12,
+              "column": 37
+            }
+          },
+          {
+            "start": {
+              "line": 12,
+              "column": 41
+            },
+            "end": {
+              "line": 12,
+              "column": 54
+            }
+          }
+        ],
+        "line": 12
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 10
+          },
+          "end": {
+            "line": 36,
+            "column": 11
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 24,
+              "column": 10
+            },
+            "end": {
+              "line": 36,
+              "column": 11
+            }
+          },
+          {
+            "start": {
+              "line": 24,
+              "column": 10
+            },
+            "end": {
+              "line": 36,
+              "column": 11
+            }
+          }
+        ],
+        "line": 24
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 0,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 0,
+      "14": 1,
+      "15": 1,
+      "16": 1
+    },
+    "f": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 0,
+      "4": 1,
+      "5": 3,
+      "6": 0
+    },
+    "b": {
+      "0": [
+        1,
+        1
+      ],
+      "1": [
+        1,
+        2
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "names": [
+        "HomeComponent",
+        "constructor",
+        "ngOnInit",
+        "start",
+        "alert",
+        "selectors",
+        "standalone",
+        "decls",
+        "vars",
+        "consts",
+        "template",
+        "HomeComponent_Template",
+        "rf",
+        "ctx",
+        "i0",
+        "ɵɵelementStart",
+        "ɵɵelement",
+        "ɵɵtext",
+        "ɵɵelementEnd",
+        "ɵɵlistener",
+        "HomeComponent_Template_button_click_4_listener"
+      ],
+      "sources": [
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\pages\\home\\home.component.ts",
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\pages\\home\\home.component.html"
+      ],
+      "sourcesContent": [
+        "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\n    selector: 'app-home',\n    templateUrl: './home.component.html',\n    styleUrls: ['./home.component.scss'],\n    standalone: false\n})\r\nexport class HomeComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n\r\n  start() {\r\n    alert('Commencez par lire le README et à vous de jouer !');\r\n  }\r\n}\r\n",
+        "<div class=\"center\">\r\n  <img src=\"/assets/logo_p6.png\" alt=\"logo\" />\r\n  <h1>Welcome to MDD</h1>\r\n  <button mat-raised-button color=\"primary\" (click)=\"start()\">Commencer</button>\r\n</div>\r\n"
+      ],
+      "mappings": ";;AAQA,WAAaA,aAAa;EAApB,MAAOA,aAAa;IACxBC,YAAA,GAAe;IAEfC,QAAQA,CAAA,GAAU;IAElBC,KAAKA,CAAA;MACHC,KAAK,CAAC,mDAAmD,CAAC;IAC5D;;;yCAPWJ,aAAa;MAAA;IAAA;;;cAAbA,aAAa;QAAAK,SAAA;QAAAC,UAAA;QAAAC,KAAA;QAAAC,IAAA;QAAAC,MAAA;QAAAC,QAAA,WAAAC,uBAAAC,EAAA,EAAAC,GAAA;UAAA,IAAAD,EAAA;YCR1BE,EAAA,CAAAC,cAAA,aAAoB;YAClBD,EAAA,CAAAE,SAAA,aAA4C;YAC5CF,EAAA,CAAAC,cAAA,SAAI;YAAAD,EAAA,CAAAG,MAAA,qBAAc;YAAAH,EAAA,CAAAI,YAAA,EAAK;YACvBJ,EAAA,CAAAC,cAAA,gBAA4D;YAAlBD,EAAA,CAAAK,UAAA,mBAAAC,+CAAA;cAAA,OAASP,GAAA,CAAAV,KAAA,EAAO;YAAA,EAAC;YAACW,EAAA,CAAAG,MAAA,gBAAS;YACvEH,EADuE,CAAAI,YAAA,EAAS,EAC1E;;;;;;;;SDIOlB,aAAa;AAAA",
+      "ignoreList": []
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "17fd790091f8f218f152f61ee67ed301a41f9461"
+  },
+  "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app-routing.module.ts": {
+    "path": "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app-routing.module.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 7,
+          "column": 15
+        },
+        "end": {
+          "line": 10,
+          "column": 2
+        }
+      },
+      "1": {
+        "start": {
+          "line": 11,
+          "column": 43
+        },
+        "end": {
+          "line": 30,
+          "column": 4
+        }
+      },
+      "2": {
+        "start": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 8
+        }
+      },
+      "3": {
+        "start": {
+          "line": 15,
+          "column": 8
+        },
+        "end": {
+          "line": 15,
+          "column": 61
+        }
+      },
+      "4": {
+        "start": {
+          "line": 19,
+          "column": 6
+        },
+        "end": {
+          "line": 21,
+          "column": 9
+        }
+      },
+      "5": {
+        "start": {
+          "line": 24,
+          "column": 6
+        },
+        "end": {
+          "line": 26,
+          "column": 9
+        }
+      },
+      "6": {
+        "start": {
+          "line": 29,
+          "column": 2
+        },
+        "end": {
+          "line": 29,
+          "column": 26
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 44
+          },
+          "end": {
+            "line": 11,
+            "column": 45
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 50
+          },
+          "end": {
+            "line": 30,
+            "column": 1
+          }
+        },
+        "line": 11
+      },
+      "1": {
+        "name": "AppRoutingModule_Factory",
+        "decl": {
+          "start": {
+            "line": 14,
+            "column": 27
+          },
+          "end": {
+            "line": 14,
+            "column": 51
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 71
+          },
+          "end": {
+            "line": 16,
+            "column": 7
+          }
+        },
+        "line": 14
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 20
+          },
+          "end": {
+            "line": 15,
+            "column": 57
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 15,
+              "column": 20
+            },
+            "end": {
+              "line": 15,
+              "column": 37
+            }
+          },
+          {
+            "start": {
+              "line": 15,
+              "column": 41
+            },
+            "end": {
+              "line": 15,
+              "column": 57
+            }
+          }
+        ],
+        "line": 15
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "f": {
+      "0": 1,
+      "1": 1
+    },
+    "b": {
+      "0": [
+        1,
+        1
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "names": [
+        "RouterModule",
+        "HomeComponent",
+        "routes",
+        "path",
+        "component",
+        "AppRoutingModule",
+        "forRoot"
+      ],
+      "sources": [
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app-routing.module.ts"
+      ],
+      "sourcesContent": [
+        "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { HomeComponent } from './pages/home/home.component';\r\n\r\n// consider a guard combined with canLoad / canActivate route option\r\n// to manage unauthenticated user to access private routes\r\nconst routes: Routes = [{ path: '', component: HomeComponent }];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule],\r\n})\r\nexport class AppRoutingModule {}\r\n"
+      ],
+      "mappings": "AACA,SAASA,YAAY,QAAgB,iBAAiB;AACtD,SAASC,aAAa,QAAQ,6BAA6B;;;AAE3D;AACA;AACA,MAAMC,MAAM,GAAW,CAAC;EAAEC,IAAI,EAAE,EAAE;EAAEC,SAAS,EAAEH;AAAa,CAAE,CAAC;AAM/D,WAAaI,gBAAgB;EAAvB,MAAOA,gBAAgB;;;yCAAhBA,gBAAgB;MAAA;IAAA;;;cAAhBA;MAAgB;IAAA;;;kBAHjBL,YAAY,CAACM,OAAO,CAACJ,MAAM,CAAC,EAC5BF,YAAY;MAAA;IAAA;;SAEXK,gBAAgB;AAAA",
+      "ignoreList": []
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "e7a1ff125c06c97546f03519aaecd96d020ea021"
+  },
+  "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app.component.ts": {
+    "path": "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app.component.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 3,
+          "column": 39
+        },
+        "end": {
+          "line": 31,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 6
+        },
+        "end": {
+          "line": 6,
+          "column": 27
+        }
+      },
+      "2": {
+        "start": {
+          "line": 9,
+          "column": 6
+        },
+        "end": {
+          "line": 11,
+          "column": 8
+        }
+      },
+      "3": {
+        "start": {
+          "line": 10,
+          "column": 8
+        },
+        "end": {
+          "line": 10,
+          "column": 57
+        }
+      },
+      "4": {
+        "start": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 27,
+          "column": 9
+        }
+      },
+      "5": {
+        "start": {
+          "line": 21,
+          "column": 10
+        },
+        "end": {
+          "line": 23,
+          "column": 11
+        }
+      },
+      "6": {
+        "start": {
+          "line": 22,
+          "column": 12
+        },
+        "end": {
+          "line": 22,
+          "column": 45
+        }
+      },
+      "7": {
+        "start": {
+          "line": 30,
+          "column": 2
+        },
+        "end": {
+          "line": 30,
+          "column": 22
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 3,
+            "column": 40
+          },
+          "end": {
+            "line": 3,
+            "column": 41
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 46
+          },
+          "end": {
+            "line": 31,
+            "column": 1
+          }
+        },
+        "line": 3
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 5,
+            "column": 4
+          },
+          "end": {
+            "line": 5,
+            "column": 5
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 18
+          },
+          "end": {
+            "line": 7,
+            "column": 5
+          }
+        },
+        "line": 5
+      },
+      "2": {
+        "name": "AppComponent_Factory",
+        "decl": {
+          "start": {
+            "line": 9,
+            "column": 27
+          },
+          "end": {
+            "line": 9,
+            "column": 47
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 67
+          },
+          "end": {
+            "line": 11,
+            "column": 7
+          }
+        },
+        "line": 9
+      },
+      "3": {
+        "name": "AppComponent_Template",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 27
+          },
+          "end": {
+            "line": 20,
+            "column": 48
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 58
+          },
+          "end": {
+            "line": 24,
+            "column": 9
+          }
+        },
+        "line": 20
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 20
+          },
+          "end": {
+            "line": 10,
+            "column": 53
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 10,
+              "column": 20
+            },
+            "end": {
+              "line": 10,
+              "column": 37
+            }
+          },
+          {
+            "start": {
+              "line": 10,
+              "column": 41
+            },
+            "end": {
+              "line": 10,
+              "column": 53
+            }
+          }
+        ],
+        "line": 10
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 10
+          },
+          "end": {
+            "line": 23,
+            "column": 11
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 21,
+              "column": 10
+            },
+            "end": {
+              "line": 23,
+              "column": 11
+            }
+          },
+          {
+            "start": {
+              "line": 21,
+              "column": 10
+            },
+            "end": {
+              "line": 23,
+              "column": 11
+            }
+          }
+        ],
+        "line": 21
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 4,
+      "6": 1,
+      "7": 1
+    },
+    "f": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 4
+    },
+    "b": {
+      "0": [
+        1,
+        1
+      ],
+      "1": [
+        1,
+        3
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "names": [
+        "AppComponent",
+        "constructor",
+        "title",
+        "selectors",
+        "standalone",
+        "decls",
+        "vars",
+        "template",
+        "AppComponent_Template",
+        "rf",
+        "ctx",
+        "i0",
+        "ɵɵelement"
+      ],
+      "sources": [
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app.component.ts",
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app.component.html"
+      ],
+      "sourcesContent": [
+        "import { Component } from '@angular/core';\r\n\r\n@Component({\n    selector: 'app-root',\n    templateUrl: './app.component.html',\n    styleUrls: ['./app.component.scss'],\n    standalone: false\n})\r\nexport class AppComponent {\r\n  title = 'front';\r\n}\r\n",
+        "<router-outlet></router-outlet>\r\n"
+      ],
+      "mappings": ";;AAQA,WAAaA,YAAY;EAAnB,MAAOA,YAAY;IANzBC,YAAA;MAOE,KAAAC,KAAK,GAAG,OAAO;;;;yCADJF,YAAY;MAAA;IAAA;;;cAAZA,YAAY;QAAAG,SAAA;QAAAC,UAAA;QAAAC,KAAA;QAAAC,IAAA;QAAAC,QAAA,WAAAC,sBAAAC,EAAA,EAAAC,GAAA;UAAA,IAAAD,EAAA;YCRzBE,EAAA,CAAAC,SAAA,oBAA+B;;;;;;;;SDQlBZ,YAAY;AAAA",
+      "ignoreList": []
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "1d46683cb1fad48d3f9b0ea816c3915785214371"
+  },
+  "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app.module.ts": {
+    "path": "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app.module.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 7,
+          "column": 36
+        },
+        "end": {
+          "line": 27,
+          "column": 4
+        }
+      },
+      "1": {
+        "start": {
+          "line": 10,
+          "column": 6
+        },
+        "end": {
+          "line": 12,
+          "column": 8
+        }
+      },
+      "2": {
+        "start": {
+          "line": 11,
+          "column": 8
+        },
+        "end": {
+          "line": 11,
+          "column": 54
+        }
+      },
+      "3": {
+        "start": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 18,
+          "column": 9
+        }
+      },
+      "4": {
+        "start": {
+          "line": 21,
+          "column": 6
+        },
+        "end": {
+          "line": 23,
+          "column": 9
+        }
+      },
+      "5": {
+        "start": {
+          "line": 26,
+          "column": 2
+        },
+        "end": {
+          "line": 26,
+          "column": 19
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 7,
+            "column": 37
+          },
+          "end": {
+            "line": 7,
+            "column": 38
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 43
+          },
+          "end": {
+            "line": 27,
+            "column": 1
+          }
+        },
+        "line": 7
+      },
+      "1": {
+        "name": "AppModule_Factory",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 27
+          },
+          "end": {
+            "line": 10,
+            "column": 44
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 64
+          },
+          "end": {
+            "line": 12,
+            "column": 7
+          }
+        },
+        "line": 10
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 20
+          },
+          "end": {
+            "line": 11,
+            "column": 50
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 11,
+              "column": 20
+            },
+            "end": {
+              "line": 11,
+              "column": 37
+            }
+          },
+          {
+            "start": {
+              "line": 11,
+              "column": 41
+            },
+            "end": {
+              "line": 11,
+              "column": 50
+            }
+          }
+        ],
+        "line": 11
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1
+    },
+    "f": {
+      "0": 1,
+      "1": 1
+    },
+    "b": {
+      "0": [
+        1,
+        1
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "names": [
+        "BrowserModule",
+        "BrowserAnimationsModule",
+        "AppRoutingModule",
+        "AppComponent",
+        "MatButtonModule",
+        "AppModule",
+        "bootstrap"
+      ],
+      "sources": [
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\app\\app.module.ts"
+      ],
+      "sourcesContent": [
+        "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { HomeComponent } from './pages/home/home.component';\r\nimport { MatButtonModule } from '@angular/material/button';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent, HomeComponent],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MatButtonModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n"
+      ],
+      "mappings": "AACA,SAASA,aAAa,QAAQ,2BAA2B;AACzD,SAASC,uBAAuB,QAAQ,sCAAsC;AAC9E,SAASC,gBAAgB,QAAQ,sBAAsB;AACvD,SAASC,YAAY,QAAQ,iBAAiB;AAE9C,SAASC,eAAe,QAAQ,0BAA0B;;AAa1D,WAAaC,SAAS;EAAhB,MAAOA,SAAS;;;yCAATA,SAAS;MAAA;IAAA;;;cAATA,SAAS;QAAAC,SAAA,GAFRH,YAAY;MAAA;IAAA;;;kBANtBH,aAAa,EACbE,gBAAgB,EAChBD,uBAAuB,EACvBG,eAAe;MAAA;IAAA;;SAKNC,SAAS;AAAA",
+      "ignoreList": []
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "24a4a20dd7f79b53d0da9d203584aa8d4429f711"
+  },
+  "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\environments\\environment.ts": {
+    "path": "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\environments\\environment.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 27
+        },
+        "end": {
+          "line": 6,
+          "column": 1
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 1
+    },
+    "f": {},
+    "b": {},
+    "inputSourceMap": {
+      "version": 3,
+      "names": [
+        "environment",
+        "production"
+      ],
+      "sources": [
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\environments\\environment.ts"
+      ],
+      "sourcesContent": [
+        "// This file can be replaced during build by using the `fileReplacements` array.\r\n// `ng build` replaces `environment.ts` with `environment.prod.ts`.\r\n// The list of file replacements can be found in `angular.json`.\r\n\r\nexport const environment = {\r\n  production: false\r\n};\r\n\r\n/*\r\n * For easier debugging in development mode, you can import the following file\r\n * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.\r\n *\r\n * This import should be commented out in production mode because it will have a negative impact\r\n * on performance if an error is thrown.\r\n */\r\n// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.\r\n"
+      ],
+      "mappings": "AAAA;AACA;AACA;AAEA,OAAO,MAAMA,WAAW,GAAG;EACzBC,UAAU,EAAE;CACb;AAED;;;;;;;AAOA",
+      "ignoreList": []
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "d217876211cc11e6c874deca7f79be2ea7d443ba"
+  },
+  "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\main.ts": {
+    "path": "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\main.ts",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 2
+        },
+        "end": {
+          "line": 6,
+          "column": 19
+        }
+      },
+      "2": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 36
+        }
+      },
+      "3": {
+        "start": {
+          "line": 10,
+          "column": 16
+        },
+        "end": {
+          "line": 10,
+          "column": 34
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 9
+          },
+          "end": {
+            "line": 10,
+            "column": 10
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 16
+          },
+          "end": {
+            "line": 10,
+            "column": 34
+          }
+        },
+        "line": 10
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 0
+          },
+          "end": {
+            "line": 7,
+            "column": 1
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 1
+            }
+          },
+          {
+            "start": {
+              "line": 5,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 1
+            }
+          }
+        ],
+        "line": 5
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 0,
+      "2": 1,
+      "3": 0
+    },
+    "f": {
+      "0": 0
+    },
+    "b": {
+      "0": [
+        0,
+        1
+      ]
+    },
+    "inputSourceMap": {
+      "version": 3,
+      "names": [
+        "enableProdMode",
+        "provideZoneChangeDetection",
+        "AppModule",
+        "environment",
+        "production",
+        "__NgCli_bootstrap_1",
+        "platformBrowser",
+        "bootstrapModule",
+        "applicationProviders",
+        "catch",
+        "err",
+        "console",
+        "error"
+      ],
+      "sources": [
+        "D:\\OpenClass\\nouveauProjet\\Developpez-une-application-full-stack-complete\\front\\src\\main.ts"
+      ],
+      "sourcesContent": [
+        "import { enableProdMode, provideZoneChangeDetection } from '@angular/core';\r\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\r\n\r\nimport { AppModule } from './app/app.module';\r\nimport { environment } from './environments/environment';\r\n\r\nif (environment.production) {\r\n  enableProdMode();\r\n}\r\n\r\nplatformBrowserDynamic().bootstrapModule(AppModule, { applicationProviders: [provideZoneChangeDetection()], })\r\n  .catch(err => console.error(err));\r\n"
+      ],
+      "mappings": ";AAAA,SAASA,cAAc,EAAEC,0BAA0B,QAAQ,eAAe;AAG1E,SAASC,SAAS,QAAQ,kBAAkB;AAC5C,SAASC,WAAW,QAAQ,4BAA4B;AAExD,IAAIA,WAAW,CAACC,UAAU,EAAE;EAC1BJ,cAAc,EAAE;AAClB;AAEAK,mBAAA,CAAAC,eAAA,EAAwB,CAACC,eAAe,CAACL,SAAS,EAAE;EAAEM,oBAAoB,EAAE,CAACP,0BAA0B,EAAE;AAAC,CAAG,CAAC,CAC3GQ,KAAK,CAACC,GAAG,IAAIC,OAAO,CAACC,KAAK,CAACF,GAAG,CAAC,CAAC",
+      "ignoreList": []
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "ea7c1be7dc6873d0abb1212900abab8df717f096"
+  }
+}
