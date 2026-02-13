@@ -4,17 +4,37 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { MatButtonModule } from '@angular/material/button';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { MaterialModule } from './shared/material.module';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { customJwtInterceptorFn2Interceptor } from './interceptors/custom-jwt-interceptor-fn.interceptor';
+import { ThemeComponent } from './pages/theme/theme.component';
+import { FormComponent } from './pages/form/form.component';
+import { DetailComponent } from './pages/detail/detail.component';
+import { MeComponent } from './pages/me/me.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { ArticleComponent } from './pages/articles/articles.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [ AppComponent,
+                  HomeComponent,
+                  LoginComponent,
+                  RegisterComponent,
+                  ArticleComponent,
+                  FormComponent,
+                  DetailComponent,
+                  MeComponent,
+                  ThemeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MaterialModule,
+    MatGridListModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+  providers: [provideHttpClient(withInterceptors([customJwtInterceptorFn2Interceptor]))],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

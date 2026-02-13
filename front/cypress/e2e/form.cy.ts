@@ -1,0 +1,32 @@
+describe('Article form tests', () => {
+
+  it('Check details', () => {
+    cy.intercept('GET','/api/sub/user',{ fixture: 'allTheme.json', },).as("themeLstRequest");
+    cy.intercept('GET','/api/article/subscribed',{ fixture: 'subArticles.json', },).as("articleLstRequest");
+    cy.intercept('POST','/api/auth/login',{ fixture: 'session.json', },).as("loginRequest");
+    cy.intercept('GET','/api/article/2',{ fixture: 'article2.json', },).as("articleRequest");
+    cy.intercept('GET','/api/article/2/comment',{ fixture: 'comments.json', },).as("commentRequest");
+    
+    cy.visit('http://localhost:4200/login')
+    
+    cy.get('[data-cy="emailField_login"]').click();
+    cy.get('[data-cy="emailInput_login"]').type('denis@gmail.com');
+    cy.get('[data-cy="passwordField_login"]').click();
+    cy.get('[data-cy="passwordInput_login"]').type('test!1234');
+    cy.get('[data-cy="submitBtn_login"]').click();
+    
+    cy.location('pathname').should('include', 'feed/article');
+    
+    cy.get('[data-cy="create-btn"]').click();
+    cy.location('pathname').should('include', 'article/form');
+    
+    cy.get('button').should('be.disabled');
+    cy.get('textarea.article-form-content').click();
+    cy.get('textarea.article-form-content').type('contenu');
+    cy.get('input').click();
+    cy.get('input').type('Titre article');
+    cy.get('mat-form-field:nth-child(3) div.mat-mdc-form-field-bottom-align').click();
+    cy.get('button').should('be.disabled');
+  })
+
+})

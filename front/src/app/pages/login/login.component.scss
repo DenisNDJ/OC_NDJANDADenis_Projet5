@@ -1,0 +1,18 @@
+.login-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.backBtn{
+    font-size:100px;
+    padding: 20px;
+}
+

@@ -1,0 +1,29 @@
+<div class="list">
+  <mat-card>
+    <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-card-title class="m0">Theme</mat-card-title>
+    </mat-card-header>
+    <div class="theme-grid">
+      @for (theme of (theme$ | async); track theme) {
+        <mat-card class="theme-card" data-cy="theme-card" appearance="outlined">
+            <mat-card-header>
+                <mat-card-title data-cy="theme-name">{{ theme.name }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p data-cy="theme-content">
+                {{ theme.content }}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <div class="btn-container">              
+                <button matButton class="sub-btn" data-cy="sub-btn"
+                        [disabled]="theme.subscribed" 
+                        (click)="subscribeTheme(theme)">
+                        {{ theme.subscribed == true ? 'Déjà abonné' : 'S\'abonner' }}
+                </button>
+              </div>
+            </mat-card-actions>
+        </mat-card>}
+    </div>
+  </mat-card>
+</div>

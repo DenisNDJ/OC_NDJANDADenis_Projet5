@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<div class="app">
+  <div class="menuDrop"></div>
+  <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+    <span>Mdd</span>
+    <div class="nav-buttons">
+    @if (($isLogged() | async)) {
+      @if((sizeScreen > 400)){
+      <span routerLink="feed/article" data-cy="article_nav">articles</span>
+      <span routerLink="feed/theme" data-cy="theme_nav">themes</span>  
+      <span routerLink="me" class="link" data-cy="me_nav">Me</span>
+      <span (click)="logout()" class="link" data-cy="logout_nav" >Logout</span>  
+      } @else {
+      <button class="dropdown">&#x2630;</button>
+      }
+    }
+    </div>
+  </mat-toolbar>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

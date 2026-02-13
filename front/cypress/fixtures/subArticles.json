@@ -1,0 +1,16 @@
+[
+{
+    "id": 1,
+    "title": "Le C",
+    "user": {"username": "Ndjanda"},
+    "date": "2026-11-11",
+    "content": "Le content du C"
+},
+{
+    "id": 2,
+    "title": "Le JAVA",
+    "user": {"username": "Denis"},
+    "date": "2026-12-12",
+    "content": "Le content du JAVA"
+}
+]

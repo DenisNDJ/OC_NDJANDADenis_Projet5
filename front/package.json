@@ -40,6 +40,7 @@
     "cypress": "^15.10.0",
     "istanbul-lib-coverage": "^3.2.2",
     "jasmine-core": "~4.2.0",
+    "jsdom": "^28.0.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
@@ -47,6 +48,7 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "nyc": "^17.1.0",
     "typescript": "~5.9.3",
+    "vitest": "^4.0.18",
     "webpack": "^5.105.2"
   }
 }

@@ -1,0 +1,17 @@
+<p class="backBtn" (click)="back()">&#8592;</p>
+<div class="register">
+    <h1>Inscription</h1>
+    <form class="register-form" [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field>
+            <input matInput placeholder="Nom d'utilisateur" formControlName="username" data-cy="username_register">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Adresse mail" formControlName="email" data-cy="email_register">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Mot de passe" formControlName="password" data-cy="password_register">
+        </mat-form-field>
+        <button mat-raised-button id="registerBtn" color="primary" type="submit" [disabled]="form.invalid">Submit</button>
+        @if (onError) {<p class="error" id="errorMes_login">An error occurred</p>}
+    </form>
+</div>

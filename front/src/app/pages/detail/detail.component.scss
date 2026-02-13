@@ -1,0 +1,27 @@
+.backBtn{
+    font-size:100px;
+    padding: 20px;
+}
+
+.article-card-header-info{
+    display: inline-flex;
+    padding-right: 3%;
+    padding-bottom: 25px;
+}
+
+.article-card-header{
+    display: grid;
+}
+
+.article-card{
+    padding-bottom: 25px;
+}
+
+.detail{
+    padding-left: 2.5%;
+}
+
+.commentaire-list{
+    height: 230px;
+    overflow: scroll;
+}

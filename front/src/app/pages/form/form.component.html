@@ -1,0 +1,24 @@
+<p class="backBtn" (click)="backtoArticleList()">&#8592;</p>
+<div class="form">
+    <h1>Creation d'un article</h1>
+    <form class="article-form" fxLayout="column" [formGroup]="articleForm" (ngSubmit)="submit()">
+        <mat-form-field>
+            <mat-label>Titre</mat-label>
+            <input matInput formControlName="title">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Theme</mat-label>
+            <mat-select type="Theme" formControlName="theme">
+                @for (theme of (theme$ | async); track theme) {
+                <mat-option [value]="theme">{{ theme.name }}</mat-option>}
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Content</mat-label>
+            <textarea class="article-form-content" matInput formControlName="content"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="articleForm.invalid">
+            Save
+        </button>
+    </form>
+</div>

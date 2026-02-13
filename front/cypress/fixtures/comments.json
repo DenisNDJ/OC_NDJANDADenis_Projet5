@@ -1,0 +1,22 @@
+[
+    {
+    "user": {"username": "Denis"},
+    "content": "Commentaire Denis"
+    },
+    {
+    "user": {"username": "Denis"},
+    "content": "Commentaire Denis 2"
+    },
+    {
+    "user": {"username": "Mac"},
+    "content": "Commentaire Mac"
+    },
+    {
+    "user": {"username": "Mac"},
+    "content": "Commentaire Mac 2"
+    },
+    {
+    "user": {"username": "Jean"},
+    "content": "Commentaire Jean"
+    }
+]

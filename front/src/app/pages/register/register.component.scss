@@ -1,0 +1,33 @@
+.register {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.backBtn{
+    font-size:100px;
+    padding: 20px;
+}
+
+.register-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+button{
+  width: 100px;
+    padding: 10px;
+    background-color: #673AB7;
+    border-radius: 15px;
+    color: white;
+}
+
+button:disabled{
+  width: 100px;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 15px;
+    color: white;
+}

@@ -1,0 +1,27 @@
+<div class="list">
+  <button mat-raised-button color="primary" class="create-btn" data-cy="create-btn" (click)="createArticle()">Create article</button>
+  <mat-card>
+    <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-card-title class="m0">Articles</mat-card-title>
+      <button mat-raised-button color="primary" class="create-btn" data-cy="sort-btn" (click)="sort()">Trier par {{ sortIndex == true ? '&#8595;' : '&#8593;' }}</button>
+    </mat-card-header>
+    <div class="card-list">
+      @if ((article$ | async)?.length == 0) {
+        <h1>Abonnez vous aux themes pour plus de contenu </h1>
+      }
+      @for (article of (article$ | async); track article) {
+          <mat-card class="article-card" data-cy="article-card" appearance="outlined" (click)="viewArticleDetail(article.id)">
+              <mat-card-header>
+                  <mat-card-title data-cy="titre_article">{{ article.title }}</mat-card-title>
+                  <mat-card-subtitle data-cy="date_article">{{ article.date | date: 'longDate'}}</mat-card-subtitle>
+                  <mat-card-subtitle data-cy="user_article">{{ article.user.username }}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                  <p data-cy="content_article">
+                  {{ article.content }}
+                  </p>
+              </mat-card-content>
+          </mat-card>}
+      </div>
+  </mat-card>
+</div>

@@ -1,17 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MaterialModule } from 'src/app/shared/material.module';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    standalone: false
+    standalone:false
 })
 export class HomeComponent implements OnInit {
+  
+  private router = inject(Router);
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  start() {
-    alert('Commencez par lire le README et à vous de jouer !');
+  loginNav(): void{
+    this.router.navigate(['/login']);
   }
+
+  registerNav(): void {
+    this.router.navigate(['/register']);
+  }
+
 }

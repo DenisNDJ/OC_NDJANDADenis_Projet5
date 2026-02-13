@@ -1,0 +1,10 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.article-card{
+    background-color: rgb(243, 238, 244);
+}
+

@@ -1,0 +1,29 @@
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.theme-card{
+    background-color: rgb(243, 238, 244);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center; 
+}
+.sub-btn{
+  width: 100px;
+    padding: 10px;
+    background-color: #673AB7;
+    border-radius: 15px;
+    color: white;
+}
+
+.sub-btn:disabled{
+  width: 100px;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 15px;
+    color: white;
+}
