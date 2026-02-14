@@ -10,7 +10,7 @@ import { MaterialModule } from 'src/app/shared/material.module';
   selector: 'app-theme',
   templateUrl: './theme.component.html',
   styleUrl: './theme.component.scss',
-    standalone:false
+  imports:[MaterialModule]
 })
 export class ThemeComponent implements OnInit, OnDestroy{
 

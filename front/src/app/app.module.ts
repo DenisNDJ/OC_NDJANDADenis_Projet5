@@ -14,20 +14,19 @@ import { FormComponent } from './pages/form/form.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { MeComponent } from './pages/me/me.component';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { ArticleComponent } from './pages/articles/articles.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
 
 @NgModule({
-  declarations: [ AppComponent,
-                  HomeComponent,
-                  LoginComponent,
-                  RegisterComponent,
-                  ArticleComponent,
-                  FormComponent,
-                  DetailComponent,
-                  MeComponent,
-                  ThemeComponent,
-  ],
+  declarations: [ AppComponent],
   imports: [
+    ArticlesComponent,
+    HomeComponent,
+    FormComponent,
+    ThemeComponent,
+    LoginComponent,
+    RegisterComponent,
+    DetailComponent,
+    MeComponent,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

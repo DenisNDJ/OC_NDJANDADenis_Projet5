@@ -9,7 +9,7 @@ import { ThemeComponent } from './pages/theme/theme.component';
 import { FormComponent } from './pages/form/form.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { MeComponent } from './pages/me/me.component';
-import { ArticleComponent } from './pages/articles/articles.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
 
 const routes: Routes = [
                         { path: '', canActivate: [UnauthGuard], component: HomeComponent },
@@ -19,7 +19,7 @@ const routes: Routes = [
 
                         { path: 'feed', canActivate: [AuthGuard], children:[
                           { path: 'theme', component: ThemeComponent },
-                          { path: 'article',  component: ArticleComponent },]
+                          { path: 'article',  component: ArticlesComponent },]
                         },
 
                         { path: 'article', canActivate: [AuthGuard], children:[

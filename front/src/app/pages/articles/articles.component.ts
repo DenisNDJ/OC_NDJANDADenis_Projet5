@@ -9,9 +9,9 @@ import { MaterialModule } from 'src/app/shared/material.module';
     selector: 'app-article',
     templateUrl: './articles.component.html',
     styleUrls: ['./articles.component.scss'],
-    standalone:false
+  imports:[MaterialModule]
 })
-export class ArticleComponent implements OnInit {
+export class ArticlesComponent implements OnInit {
 
   private articleService = inject(ArticleService);
   private router = inject(Router);
@@ -34,9 +34,11 @@ export class ArticleComponent implements OnInit {
 
   public sort():void{
       this.article$ = this.article$.pipe(map((data) => {
-      data.sort((a, b) => {
-          if(this.sortIndex) return a.date < b.date ? -1 : 1;
-          else return a.date > b.date ? -1 : 1;});
+      if(data.length>1){
+        data.sort((a, b) => {
+            if(this.sortIndex) return a.date < b.date ? -1 : 1;
+            else return a.date > b.date ? -1 : 1;});
+      }
       return data;
       }))
       this.sortIndex = !this.sortIndex;

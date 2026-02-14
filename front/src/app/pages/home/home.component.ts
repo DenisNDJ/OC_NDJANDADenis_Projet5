@@ -6,7 +6,7 @@ import { MaterialModule } from 'src/app/shared/material.module';
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    standalone:false
+    imports:[MaterialModule]
 })
 export class HomeComponent implements OnInit {
   

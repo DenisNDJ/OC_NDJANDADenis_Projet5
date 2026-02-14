@@ -11,7 +11,7 @@ import { MaterialModule } from 'src/app/shared/material.module';
     selector: 'app-register',
     templateUrl: './register.component.html',
     styleUrls: ['./register.component.scss'],
-    standalone:false
+    imports:[MaterialModule]
 })
 export class RegisterComponent implements OnInit {
   private authService = inject(AuthService);

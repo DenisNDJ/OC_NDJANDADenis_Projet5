@@ -6,12 +6,13 @@ import { ArticlePayload } from 'src/app/core/models/articlePayload.interface';
 import { Theme } from 'src/app/core/models/theme.interface';
 import { ArticleService } from 'src/app/core/services/article.service';
 import { SubscriptionService } from 'src/app/core/services/subscription.service';
+import { MaterialModule } from 'src/app/shared/material.module';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
-    standalone:false
+    imports:[MaterialModule]
 })
 export class FormComponent implements OnInit, OnDestroy{
   

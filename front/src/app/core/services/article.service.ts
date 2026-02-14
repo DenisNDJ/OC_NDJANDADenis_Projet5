@@ -1,9 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { LoginRequest } from "../models/loginRequest.interface";
-import { RegisterRequest } from "../models/registerRequest.interface";
-import { SessionInformation } from "../models/sessionInformation.interface";
 import { Article } from "../models/article.interface";
 import { ArticlePayload } from "../models/articlePayload.interface";
 import { Commentaire } from "../models/commentaire.interface";

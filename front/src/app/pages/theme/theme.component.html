@@ -16,7 +16,7 @@
             </mat-card-content>
             <mat-card-actions>
               <div class="btn-container">              
-                <button matButton class="sub-btn" data-cy="sub-btn"
+                <button matButton class="sub-btn" data-cy="sub-btn" id="sub-btn"
                         [disabled]="theme.subscribed" 
                         (click)="subscribeTheme(theme)">
                         {{ theme.subscribed == true ? 'Déjà abonné' : 'S\'abonner' }}

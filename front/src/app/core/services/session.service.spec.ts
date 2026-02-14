@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { SessionService } from './session.service';
 import { SessionInformation } from '../models/sessionInformation.interface';
 import { take } from 'rxjs';
+import { expect, vitest, describe, beforeEach, it, afterEach } from 'vitest';
 
 describe('SessionService', () => {
   let service: SessionService;

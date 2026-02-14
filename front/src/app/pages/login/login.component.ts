@@ -13,7 +13,7 @@ import { MaterialModule } from 'src/app/shared/material.module';
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
-    standalone:false
+    imports:[MaterialModule]
 })
 export class LoginComponent implements OnInit, OnDestroy {
   private authService = inject(AuthService);

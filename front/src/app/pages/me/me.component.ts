@@ -1,5 +1,5 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Subject, Observable, takeUntil } from 'rxjs';
 import { Theme } from 'src/app/core/models/theme.interface';
 import { User } from 'src/app/core/models/user.interface';
@@ -13,7 +13,8 @@ import { MaterialModule } from 'src/app/shared/material.module';
   selector: 'app-me',
   templateUrl: './me.component.html',
   styleUrl: './me.component.scss',
-    standalone:false
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  imports:[MaterialModule]
 })
 export class MeComponent  implements OnInit, OnDestroy{
 

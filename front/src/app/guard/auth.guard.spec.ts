@@ -1,17 +1,36 @@
 import { TestBed } from '@angular/core/testing';
-import { CanActivateFn } from '@angular/router';
+import { AuthGuard } from './auth.guard';
+import { HttpClientModule } from '@angular/common/http';
+import { expect, vitest, describe, beforeEach, it } from 'vitest';
+import { SessionService } from '../core/services/session.service';
+import { Router } from '@angular/router';
 
-import { authGuard } from './auth.guard';
+describe('AuthGuard', () => {
+    let sessionService: SessionService
+    let authGuard: AuthGuard;
+    let routerMock: Router;
 
-describe('authGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => authGuard(...guardParameters));
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [HttpClientModule]
+        });
+        authGuard = TestBed.inject(AuthGuard);
+        sessionService = TestBed.inject(SessionService);
+        routerMock = TestBed.inject(Router);
+    });
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-  });
+    it('Tester si connecter', () => {
+      
+        sessionService.isLogged = true;
+        const ret = authGuard.canActivate();
+        expect(ret).toBe(true)
+    })
 
-  it('should be created', () => {
-    expect(executeGuard).toBeTruthy();
-  });
+    it('Tester si non connecter', () => {
+      const spyNav = vitest.spyOn(routerMock, 'navigate');
+      sessionService.isLogged = false;
+      const ret = authGuard.canActivate();
+      expect(ret).toBe(false)
+      expect(spyNav).toHaveBeenCalledWith(['login'])
+    })
 });

@@ -99,6 +99,7 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
+            "coverage": true,
             "tsConfig": "tsconfig.spec.json"
           }
         },

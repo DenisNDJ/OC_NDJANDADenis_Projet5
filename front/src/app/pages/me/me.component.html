@@ -2,17 +2,17 @@
   <div class="form">
       @if(userForm){
       <form class="me-form" fxLayout="column" [formGroup]="userForm" (ngSubmit)="submit()">
-          <mat-form-field>
+          <mat-form-field id="name_me">
             <mat-label>Username</mat-label>
-            <input matInput formControlName="username">
+            <input matInput id="username_me" formControlName="username">
           </mat-form-field>
           <mat-form-field>
             <mat-label>Email</mat-label>
-            <textarea matInput formControlName="email"></textarea>
+            <textarea matInput id="email_me" formControlName="email"></textarea>
           </mat-form-field>
           <mat-form-field>
             <mat-label>Password</mat-label>
-            <textarea matInput formControlName="password"></textarea>
+            <textarea matInput id="password_me" formControlName="password"></textarea>
           </mat-form-field>
           <button mat-raised-button color="primary" [disabled]="userForm.invalid" type="submit">
               Sauvegarder
@@ -38,7 +38,7 @@
               </mat-card-content>
               <mat-card-actions>
                 <div class="btn-container">
-                  <button mat-raised-button color="primary" matButton class="sub-btn" (click)="subscribeTheme(theme.id)">Se désabonner</button>
+                  <button mat-raised-button color="primary" matButton id="sub-btn" class="sub-btn" (click)="subscribeTheme(theme.id)">Se désabonner</button>
                 </div>
               </mat-card-actions>
           </mat-card>}

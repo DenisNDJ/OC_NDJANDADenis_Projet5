@@ -1,18 +1,18 @@
-<p class="backBtn" (click)="backtoArticleList()">&#8592;</p>
+<p class="backBtn" id="backBtn" (click)="backtoArticleList()">&#8592;</p>
 <div class="detail">
     <div class="article-card">
         @if(article) {
         <mat-card appearance="outlined">
             <mat-card-header class="article-card-header">
-                <mat-card-title class="article-card-header-title" data-cy="article-card-header-title">{{ article.title }}</mat-card-title>
+                <mat-card-title class="article-card-header-title" id="title-detail" data-cy="article-card-header-title">{{ article.title }}</mat-card-title>
                 <div>
-                    <div class="article-card-header-info" data-cy="article-card-header-date">{{ article.date | date: 'longDate'}}</div>
-                    <div class="article-card-header-info" data-cy="article-card-header-user">{{ article.user.username }}</div>
-                    <div class="article-card-header-info" data-cy="article-card-header-theme">{{ article.theme.name }}</div>
+                    <div class="article-card-header-info" id="date-detail" data-cy="article-card-header-date">{{ article.date | date: 'longDate'}}</div>
+                    <div class="article-card-header-info" id="user-detail" data-cy="article-card-header-user">{{ article.user.username }}</div>
+                    <div class="article-card-header-info" id="theme-detail" data-cy="article-card-header-theme">{{ article.theme.name }}</div>
                 </div>
             </mat-card-header>
             <mat-card-content>
-                <p class="article-card-content" data-cy='article-card-content'>
+                <p class="article-card-content" data-cy='article-card-content' id="content-detail">
                 {{ article.content }}
                 </p>
             </mat-card-content>
@@ -25,10 +25,10 @@
             @for (comment of (comment$ | async); track comment) {
             <mat-card appearance="outlined">
                 <mat-card-header>
-                    <mat-card-title>{{ comment.user.username }}</mat-card-title>
+                    <mat-card-title id="commentUser-detail">{{ comment.user.username }}</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
-                    <p>
+                    <p id="commentContent-detail">
                     {{ comment.content }}
                     </p>
                 </mat-card-content>    
@@ -38,9 +38,9 @@
             <form class="mt2" fxLayout="column" [formGroup]="commentForm" (ngSubmit)="submit()">
                 <mat-form-field class="example-full-width">
                     <mat-label>Leave a comment</mat-label>
-                    <textarea matInput placeholder="Ex. It makes me feel..." formControlName="content"></textarea>
+                    <textarea matInput id="commentInput-detail" placeholder="Ex. It makes me feel..." formControlName="content"></textarea>
                 </mat-form-field>
-                <button mat-raised-button color="primary" [disabled]="commentForm.invalid" type="submit">
+                <button mat-raised-button id="commentBtn-detail" color="primary" [disabled]="commentForm.invalid" type="submit">
                     Save
                 </button>
             </form>
