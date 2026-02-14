@@ -7,7 +7,6 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "coverage": "vitest run --coverage",
     "e2e:ci": "ng run front:e2e-ci",
     "e2e:coverage": "npx nyc report --reporter=lcov --reporter=text-summary"
   },

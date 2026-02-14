@@ -17,7 +17,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ArticlesComponent } from './pages/articles/articles.component';
 
 @NgModule({
-  declarations: [ AppComponent],
+  declarations: [AppComponent],
   imports: [
     ArticlesComponent,
     HomeComponent,
