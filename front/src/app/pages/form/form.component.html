@@ -17,8 +17,11 @@
             <mat-label>Content</mat-label>
             <textarea class="article-form-content" matInput formControlName="content"></textarea>
         </mat-form-field>
-        <button mat-raised-button color="primary" type="submit" [disabled]="articleForm.invalid">
-            Save
-        </button>
+        <div class="form-btn-container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="articleForm.invalid">
+                Enregistrer
+            </button>
+        </div>
+
     </form>
 </div>
