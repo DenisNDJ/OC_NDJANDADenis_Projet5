@@ -46,7 +46,7 @@ describe('Register tests', () => {
         cy.get('[data-cy="email_register"]').type('denis@gmail.com');
         cy.get('[data-cy="password_register"]').type('ndjanda&1A');
         cy.get('button[type=submit]').click();
-        cy.get('p.error').should('have.text', 'An error occurred');
+        cy.get('p.error').should('have.text', 'Erreur d\'inscription');
         cy.get('p.error').should('be.visible');
     })
 })

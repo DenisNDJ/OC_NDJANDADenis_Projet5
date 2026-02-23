@@ -30,7 +30,7 @@ public class SpringSecurityConfig {
 	@Value("${mdd.api.key}")
 	private String jwtKey;
 	
-	private final String[] lstBypass = {"/api/auth/login", "/api/auth/register", "/swagger-ui/**", "/v3/api-docs/**"};
+	private final String[] lstBypass = {"/api/auth/login", "/api/auth/register"};
 	
 	@Bean
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {        

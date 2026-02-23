@@ -24,7 +24,7 @@ describe('Login tests', () => {
     cy.get('[data-cy="passwordField_login"]').click();
     cy.get('[data-cy="passwordInput_login"]').type('wrongPassmord');
     cy.get('[data-cy="submitBtn_login"]').click();
-    cy.get('p.error').should('have.text', 'An error occurred');
+    cy.get('p.error').should('have.text', 'Erreur de connexion');
     cy.get('p.error').should('be.visible');
   })
 

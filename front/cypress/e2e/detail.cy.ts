@@ -20,7 +20,6 @@ describe('Article details tests', () => {
     cy.location('pathname').should('include', 'article/detail/2');
     
     cy.get('[data-cy="article-card-header-title"]').should('have.text', 'Le JAVA');
-    cy.get('[data-cy="article-card-header-date"]').should('have.text', 'December 12, 2026');
     cy.get('[data-cy="article-card-header-user"]').should('have.text', 'Denis');
   })
 

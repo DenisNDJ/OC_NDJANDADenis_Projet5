@@ -57,7 +57,7 @@ public class ArticleControllerTest {
     }
 	
 	@Test
-	public void getSessionbyId() throws Exception {
+	public void getArticleSubscribed() throws Exception {
 		objectMapper.registerModule(new JavaTimeModule());
         
 		MvcResult mockResponse = mockMvc.perform(get("/api/article/subscribed")
@@ -74,6 +74,56 @@ public class ArticleControllerTest {
 		assertThat(articles.size()).isEqualTo(7);
 		assertThat(articles.get(0).getTitle()).isEqualTo("Wiki Java");
 		assertThat(articles.get(1).getTitle()).isEqualTo("Wiki Python");
+	}
+	
+	@Test
+	public void getArticleById() throws Exception {
+		objectMapper.registerModule(new JavaTimeModule());
+        
+		MvcResult mockResponse = mockMvc.perform(get("/api/article/4")
+				            	.contentType(MediaType.APPLICATION_JSON)
+				    	        .characterEncoding("utf-8")
+				    	        .header("Authorization", mockAuthorization))
+				            	.andExpect(status().isOk())
+				            	.andReturn();
+		
+        
+		MvcResult mockResponseFailed = mockMvc.perform(get("/api/article/5")
+				            	.contentType(MediaType.APPLICATION_JSON)
+				    	        .characterEncoding("utf-8")
+				    	        .header("Authorization", mockAuthorization))
+				            	.andExpect(status().isNotFound())
+				            	.andReturn();
+        
+        String json = mockResponse.getResponse().getContentAsString();
+        ArticleDto article = objectMapper.readValue(json, new TypeReference<>(){});
+
+		assertThat(article).isNotNull();
+	}
+	
+	@Test
+	public void failedAuth() throws Exception {
+		objectMapper.registerModule(new JavaTimeModule());
+		String wrongToken = "eyJhbGciOiJIUzI1NiJ9.eyJz"
+							+ "dWIiOiI0IiwiaWF0IjoxNzY5"
+							+ "OTYzOTIyLCJleHAiOjE3Njk5N"
+							+ "jUzNjJ9.Rh51hFahiNoMTtnC8X"
+							+ "DiCKB8jCm41mxsqZXMmHwCygg";
+        
+		MvcResult mockResponse = mockMvc.perform(get("/api/article/subscribed")
+				            	.contentType(MediaType.APPLICATION_JSON)
+				    	        .characterEncoding("utf-8")
+				    	        .header("Authorization", "fake_token"))
+				            	.andExpect(status().isUnauthorized())
+				            	.andReturn();
+        
+		MvcResult mockResponse_2 = mockMvc.perform(get("/api/article/subscribed")
+				            	.contentType(MediaType.APPLICATION_JSON)
+				    	        .characterEncoding("utf-8")
+				    	        .header("Authorization", wrongToken))
+				            	.andExpect(status().isUnauthorized())
+				            	.andReturn();
+    
 	}
 	
 }
