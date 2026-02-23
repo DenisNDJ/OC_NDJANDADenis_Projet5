@@ -1,25 +1,31 @@
-# P6-Full-Stack-reseau-dev
+# P5-Mdd
+
+Prototype pour l'application MDD.
+
+
+MDD est un réseau sociale permetant à ces utilisateurs de publier, comenter et lire des articles.
+Les fonctionalités du prototype sont: 
+- Inscription
+- Connection
+- Publier des articles
+- Abonnement aux thèmes
+- Commenter un article
+- Modifier les données utilisateurs
 
 ## Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+Pour installer les dépendances frontend (à réaliser avant de lancer l'application):
+- Se positionner dans le dossier front (`cd front`).
+- Installer le node_modules (`npm install`).
 
-Don't forget to install your node_modules before starting (`npm install`).
+## Base de donnée
 
-### Development server
+- Configurer un fichier application properties pour la connection avec la base de données.
+- Utiliser le script dans 'back/src/main/ressources/sql' pour creer la base de données
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Lancer le projet
+Ouvrir deux terminals de commandes:
+- Depuis le fichier back, utilisé la commande: 'mvn spring-boot:run'
 
-### Build
+- Depuis le fichier front, utilisé la commande: 'npm run star'
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-### Where to start
-
-As you may have seen if you already started the app, a simple home page containing a logo, a title and a button is available. If you take a look at its code (in the `home.component.html`) you will see that an external UI library is already configured in the project.
-
-This library is `@angular/material`, it's one of the most famous in the angular ecosystem. As you can see on their docs (https://material.angular.io/), it contains a lot of highly customizable components that will help you design your interfaces quickly.
-
-Note: I recommend to use material however it's not mandatory, if you prefer you can get rid of it.
-
-Good luck!
