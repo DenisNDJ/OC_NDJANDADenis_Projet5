@@ -19,7 +19,6 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
-
 const materialModules = [
   FormsModule,
   MatInputModule,

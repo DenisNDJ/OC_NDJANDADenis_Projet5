@@ -8,6 +8,7 @@ import { SubscriptionService } from 'src/app/core/services/subscription.service'
 import { UserService } from 'src/app/core/services/user.service';
 import { mePassValidator } from 'src/app/core/validators/valid.validator';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-me',
@@ -20,6 +21,7 @@ export class MeComponent  implements OnInit, OnDestroy{
 
   private destroy$!: Subject<boolean>;
   public user$!: Observable<User>;
+  private matSnackBar = inject(MatSnackBar);
   private sessionService = inject(SessionService);
   private subscriptionService = inject(SubscriptionService);
   private userService = inject(UserService);
@@ -47,8 +49,12 @@ export class MeComponent  implements OnInit, OnDestroy{
     this.userService
       .update(userPayload, this.sessionService.sessionInformation!.id.toString())
       .pipe(takeUntil(this.destroy$))
-      .subscribe(_ => {
-        this.ngOnInit();
+      .subscribe({
+        next: _ => {
+          this.matSnackBar.open("Utilisateur Updated", 'Close', { duration: 3000 })
+          this.ngOnInit();
+        },
+        error: _ => this.matSnackBar.open("Erreur de mise à jour", 'Close', { duration: 3000 }),
       });
   }
 
@@ -61,6 +67,8 @@ export class MeComponent  implements OnInit, OnDestroy{
   }
 
   public subscribeTheme(idTheme: number):void{
-      this.subscriptionService.unsubscribe(idTheme.toString()).pipe(takeUntil(this.destroy$)).subscribe(_ => this.ngOnInit());
+      this.subscriptionService.unsubscribe(idTheme.toString())
+                              .pipe(takeUntil(this.destroy$))
+                              .subscribe(_ => this.ngOnInit());
   }
 }
