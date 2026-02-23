@@ -5,3 +5,18 @@
   align-items: center;
   flex-direction: column;
 }
+
+#login-btn-home{
+  float: left;
+}
+
+#register-btn-home{
+  float: right;
+}
+
+@media (min-width: 768px) {
+  .btn_container{
+    display: inline;
+    width: 40%;
+  }
+}

@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { UnauthGuard } from './guard/unauth.guard';
-import { AuthGuard } from './guard/auth.guard';
 import { ThemeComponent } from './pages/theme/theme.component';
 import { FormComponent } from './pages/form/form.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { MeComponent } from './pages/me/me.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
+import { UnauthGuard } from './core/guard/unauth.guard';
+import { AuthGuard } from './core/guard/auth.guard';
 
 const routes: Routes = [
                         { path: '', canActivate: [UnauthGuard], component: HomeComponent },

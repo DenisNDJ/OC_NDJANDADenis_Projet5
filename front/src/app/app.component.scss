@@ -1,31 +1,92 @@
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown:hover .menuDrop {
-  display: block;
-  z-index: 1;
-}
-
-.dropdown{
-    float: left;
-}
-
 .nav-buttons{
     width: 100%;
 }
 
-.menuDrop{
-  display: none;
-  position: absolute;
-  height: 100%;
+@media (min-width: 768px) {
+  .phNav {
+    display: none;
+  }
+  .active{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .fullScreenNav {
+    display: none;
+  }
+}
+
+.not-active {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.active {
   width: 70%;
-  background-color: black;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.active a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  display: block;
+}
+
+.nav-buttons span {
+  padding: 1%;
   float: right;
+}
+
+.activeNavBar{
+  color: skyblue;
+}
+
+#logout_nav{
+  color: red;
+}
+
+#logout_Mynav{
+  color: red;
+}
+
+.overlay-content a {
+  padding-top: 20px;
+  font-size: 1.2rem;
+}
+
+#me_nav_phone{
+  position: absolute;
+  bottom: 10px;
+  font-size: 3rem;
+}
+
+#myNav{
   outline: auto;
+  height: 667px;
+}
+
+.img_logo{
+  width: 100px;
+  height: 100%;
+  background-color: white;
 }

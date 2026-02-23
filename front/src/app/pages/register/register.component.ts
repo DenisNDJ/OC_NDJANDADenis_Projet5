@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
       '',
       [
         Validators.required,
-        Validators.min(8),
+        Validators.minLength(8),
         authValidator(),
       ]
     ]

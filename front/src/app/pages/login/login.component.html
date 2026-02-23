@@ -1,5 +1,5 @@
 <p class="backBtn" id="backBtn" data-cy="bckBtn_login" (click)="back()">&#8592;</p>
-<div class="login" fxLayout="row" fxLayoutAlign="center center">
+<div class="login">
     <h1>Se connecter</h1>
     <form class="login-form" [formGroup]="form" (ngSubmit)="submit()">
         <mat-form-field data-cy="emailField_login">
@@ -10,7 +10,9 @@
             <mat-label>Mot De Passe</mat-label>
             <input matInput placeholder="Mot De Passe" formControlName="password" data-cy="passwordInput_login">
         </mat-form-field>
-        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" data-cy="submitBtn_login" id="submitBtn_login">Submit</button>
-        @if (onError) {<p class="error" id="errorMes_login">An error occurred</p>}
+        <div id="btn_container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" data-cy="submitBtn_login" id="submitBtn_login">Submit</button>
+        </div>
+        @if (onError) {<p class="error" id="errorMes_login">Erreur de connexion</p>}
     </form>
 </div>

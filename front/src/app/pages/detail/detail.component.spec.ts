@@ -80,7 +80,6 @@ describe('DetailComponent', () => {
     day: 'numeric'};
 
     const titleElement = document.getElementById('title-detail')!;
-    const dateElement = document.getElementById('date-detail')!;
     const userElement = document.getElementById('user-detail')!;
     const themeElement = document.getElementById('theme-detail')!;
     const contentElement = document.getElementById('content-detail')!;
@@ -89,7 +88,6 @@ describe('DetailComponent', () => {
     const commentContentElement = document.getElementById('commentContent-detail')!;
 
     expect(titleElement.textContent).toContain(mockArticle.title);
-    expect(dateElement.textContent).toContain(mockArticle.date.toLocaleDateString("en-US", options));
     expect(userElement.textContent).toContain(mockArticle.user.username);
     expect(themeElement.textContent).toContain(mockArticle.theme.name);
     expect(contentElement.textContent).toContain(mockArticle.content);

@@ -78,15 +78,6 @@ describe('ArticleService', () => {
     req.flush(mockArticle);
   });
 
-  it('should return all Article', () => {
-
-    service.all().subscribe((sessions) => expect(sessions).toEqual(mockArticles));
-
-    const req = httpMock.expectOne('/api/article');
-    expect(req.request.method).toBe('GET');
-    req.flush(mockArticles);
-  });
-
   it('should return all Article of subscribed theme', () => {
 
     service.getSubscribed().subscribe((sessions) => expect(sessions).toEqual(mockArticles));

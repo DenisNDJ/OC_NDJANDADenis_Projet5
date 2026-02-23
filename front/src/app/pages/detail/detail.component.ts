@@ -8,12 +8,13 @@ import { CommentairePayload } from 'src/app/core/models/commentPayload.interface
 import { ArticleService } from 'src/app/core/services/article.service';
 import { SessionService } from 'src/app/core/services/session.service';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { CustomDatePipePipe } from "../../shared/customPipe/custom-date-pipe.pipe";
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.scss',
-  imports:[MaterialModule]
+  imports: [MaterialModule, CustomDatePipePipe]
 })
 export class DetailComponent implements OnInit, OnDestroy{
 

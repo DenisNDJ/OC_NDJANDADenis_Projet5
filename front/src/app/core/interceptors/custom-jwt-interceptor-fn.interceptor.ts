@@ -1,6 +1,6 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { SessionService } from '../core/services/session.service';
+import { SessionService } from '../services/session.service';
 
 export const customJwtInterceptorFn2Interceptor: HttpInterceptorFn = (req, next) => {
 

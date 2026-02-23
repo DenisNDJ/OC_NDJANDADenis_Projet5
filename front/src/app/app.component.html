@@ -1,21 +1,29 @@
+  <div id="myNav" [ngClass]="overlay">
+    <div class="overlay-content">
+      <a routerLink="feed/article" data-cy="article_Mynav" routerLinkActive='activeNavBar'>Articles</a>
+      <a routerLink="feed/theme" data-cy="theme_Mynav" routerLinkActive='activeNavBar'>Themes</a>
+      <a routerLink="me" class="material-icons" id="me_nav_phone" data-cy="me_Mynav">account_circle</a>
+      <a (click)="logout()" class="logout" id="logout_Mynav" data-cy="logout_Mynav">Se déconnecter</a>
+    </div>
+  </div>
 <div class="app">
-  <div class="menuDrop"></div>
   <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
-    <span>Mdd</span>
+    <img class="img_logo" src="/assets/logo_p6.png" alt="logo" />
     <div class="nav-buttons">
     @if (($isLogged() | async)) {
-      @if((sizeScreen > 400)){
-      <span routerLink="feed/article" data-cy="article_nav">articles</span>
-      <span routerLink="feed/theme" data-cy="theme_nav">themes</span>  
-      <span routerLink="me" class="link" data-cy="me_nav">Me</span>
-      <span (click)="logout()" class="link" data-cy="logout_nav" >Logout</span>  
-      } @else {
-      <button class="dropdown">&#x2630;</button>
-      }
+      <div class="fullScreenNav">
+        <span routerLink="me" class="material-icons" data-cy="me_nav" >account_circle</span>
+        <span routerLink="feed/article" data-cy="article_nav" routerLinkActive='activeNavBar'>Articles</span>
+        <span routerLink="feed/theme" data-cy="theme_nav" routerLinkActive='activeNavBar'>Themes</span>
+        <span (click)="logout()" id="logout_nav" data-cy="logout_nav" >Se déconnecter</span>
+      </div>
+      <div class="phNav">
+        <button class="dropdown" (click)="openNavBar()">&#x2630;</button>
+      </div>
     }
     </div>
   </mat-toolbar>
-  <div>
+  <div (click)="closeNavBar()">
     <router-outlet></router-outlet>
   </div>
 </div>

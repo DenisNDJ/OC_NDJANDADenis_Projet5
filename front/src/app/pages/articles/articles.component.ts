@@ -4,19 +4,19 @@ import { map, Observable } from 'rxjs';
 import { Article } from 'src/app/core/models/article.interface';
 import { ArticleService } from 'src/app/core/services/article.service';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { CustomDatePipePipe } from "../../shared/customPipe/custom-date-pipe.pipe";
 
 @Component({
     selector: 'app-article',
     templateUrl: './articles.component.html',
     styleUrls: ['./articles.component.scss'],
-  imports:[MaterialModule]
+  imports: [MaterialModule, CustomDatePipePipe]
 })
 export class ArticlesComponent implements OnInit {
 
   private articleService = inject(ArticleService);
   private router = inject(Router);
-  public sortIndex: boolean = true;
-  public emptyList: boolean = true;
+  public sortIndex: boolean = false;
 
   public article$: Observable<Article[]> = this.articleService.getSubscribed();
   
@@ -33,15 +33,20 @@ export class ArticlesComponent implements OnInit {
   }
 
   public sort():void{
-      this.article$ = this.article$.pipe(map((data) => {
-      if(data.length>1){
-        data.sort((a, b) => {
-            if(this.sortIndex) return a.date < b.date ? -1 : 1;
-            else return a.date > b.date ? -1 : 1;});
-      }
-      return data;
-      }))
+      if (this.sortIndex) this.article$ = this.article$.pipe(
+        map(article =>
+          article.sort(
+            (a, b) => Date.parse(a.date.toString()) - Date.parse(b.date.toString())
+        )));
+
+      if (!this.sortIndex) this.article$ = this.article$.pipe(
+        map(article =>
+          article.sort(
+            (a, b) => Date.parse(b.date.toString()) - Date.parse(a.date.toString())
+        )));
       this.sortIndex = !this.sortIndex;
   }
+
+
 
 }

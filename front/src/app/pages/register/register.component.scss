@@ -16,18 +16,12 @@
   align-items: flex-start;
 }
 
-button{
-  width: 100px;
-    padding: 10px;
-    background-color: #673AB7;
-    border-radius: 15px;
-    color: white;
+h1{
+  justify-content: center;
+  display: flex;
 }
 
-button:disabled{
-  width: 100px;
-    padding: 10px;
-    background-color: grey;
-    border-radius: 15px;
-    color: white;
+#btn_container{
+  text-align: center;
+  width: 100%;
 }

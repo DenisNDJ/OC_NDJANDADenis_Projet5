@@ -16,10 +16,6 @@ export class ArticleService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public all(): Observable<Article[]> {
-    return this.httpClient.get<Article[]>(this.pathService);
-  }
-
   public allComment(id: string): Observable<Commentaire[]> {
     return this.httpClient.get<Commentaire[]>(`${this.pathService}/${id}/comment`);
   }

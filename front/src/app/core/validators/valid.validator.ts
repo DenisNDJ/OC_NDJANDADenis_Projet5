@@ -1,4 +1,4 @@
-import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { AbstractControl, MinLengthValidator, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 export function authValidator(): ValidatorFn {
     return (ctrl: AbstractControl): null | ValidationErrors => {

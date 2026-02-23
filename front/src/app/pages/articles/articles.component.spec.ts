@@ -32,7 +32,7 @@ describe('ArticlesComponent', () => {
     title: "Le C",
     user: mockUser,
     theme: mockTheme,
-    date: new Date,
+    date: new Date(),
     content: "Le content de C"
   }
 

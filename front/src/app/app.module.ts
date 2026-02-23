@@ -8,13 +8,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { MaterialModule } from './shared/material.module';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { customJwtInterceptorFn2Interceptor } from './interceptors/custom-jwt-interceptor-fn.interceptor';
 import { ThemeComponent } from './pages/theme/theme.component';
 import { FormComponent } from './pages/form/form.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { MeComponent } from './pages/me/me.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ArticlesComponent } from './pages/articles/articles.component';
+import { customJwtInterceptorFn2Interceptor } from './core/interceptors/custom-jwt-interceptor-fn.interceptor';
 
 @NgModule({
   declarations: [AppComponent],

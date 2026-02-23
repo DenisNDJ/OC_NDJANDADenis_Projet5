@@ -6,7 +6,7 @@
             <mat-card-header class="article-card-header">
                 <mat-card-title class="article-card-header-title" id="title-detail" data-cy="article-card-header-title">{{ article.title }}</mat-card-title>
                 <div>
-                    <div class="article-card-header-info" id="date-detail" data-cy="article-card-header-date">{{ article.date | date: 'longDate'}}</div>
+                    <div class="article-card-header-info" id="date-detail" data-cy="article-card-header-date">{{ article.date.toString() | customDatePipe }}</div>
                     <div class="article-card-header-info" id="user-detail" data-cy="article-card-header-user">{{ article.user.username }}</div>
                     <div class="article-card-header-info" id="theme-detail" data-cy="article-card-header-theme">{{ article.theme.name }}</div>
                 </div>

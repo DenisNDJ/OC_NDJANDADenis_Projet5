@@ -8,3 +8,17 @@
     background-color: rgb(243, 238, 244);
 }
 
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trier-btn{
+  float: right;
+}
+
+.btn_container{
+  padding: 25px;
+  width: 95%;
+}

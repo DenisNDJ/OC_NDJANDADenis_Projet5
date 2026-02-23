@@ -11,7 +11,9 @@
         <mat-form-field>
             <input matInput placeholder="Mot de passe" formControlName="password" data-cy="password_register">
         </mat-form-field>
-        <button mat-raised-button id="registerBtn" color="primary" type="submit" [disabled]="form.invalid">Submit</button>
-        @if (onError) {<p class="error" id="errorMes_register">An error occurred</p>}
+        <div id="btn_container">
+            <button mat-raised-button id="registerBtn" color="primary" type="submit" [disabled]="form.invalid">Submit</button>
+        </div>
+        @if (onError) {<p class="error" id="errorMes_register">Erreur d'inscription</p>}
     </form>
 </div>
