@@ -2,7 +2,7 @@
   <h1>Profil utilisateur</h1>
   <div class="form">
       @if(userForm){
-      <form class="me-form" fxLayout="column" [formGroup]="userForm" (ngSubmit)="submit()">
+      <form class="me-form" [formGroup]="userForm" (ngSubmit)="submit()">
           <mat-form-field id="name_me">
             <mat-label>Username</mat-label>
             <input matInput id="username_me" formControlName="username">
@@ -23,11 +23,10 @@
       </form>}
   </div>
 
+  <div class="line"></div>
+
   <div class="list">
-    <mat-card>
-      <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
-        <mat-card-title class="m0">Abonnements</mat-card-title>
-      </mat-card-header>
+    <h1>Abonnements</h1>
       <div class="theme-grid">
         @for (theme of (theme$ | async); track theme) {
           <mat-card class="theme-card" appearance="outlined">
@@ -46,6 +45,5 @@
               </mat-card-actions>
           </mat-card>}
       </div>
-    </mat-card>
   </div>
 </div>
