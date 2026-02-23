@@ -7,6 +7,7 @@ import { Theme } from 'src/app/core/models/theme.interface';
 import { ArticleService } from 'src/app/core/services/article.service';
 import { SubscriptionService } from 'src/app/core/services/subscription.service';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-form',
@@ -19,6 +20,7 @@ export class FormComponent implements OnInit, OnDestroy{
   private articleService = inject(ArticleService);
   private router = inject(Router);
   private fb = inject(FormBuilder);
+  private matSnackBar = inject(MatSnackBar);
   private destroy$!: Subject<boolean>;
   public theme$!: Observable<Theme[]>;
   public themeForm!: Theme;
@@ -61,8 +63,13 @@ export class FormComponent implements OnInit, OnDestroy{
     this.articleService
       .create(articleRequest)
       .pipe(takeUntil(this.destroy$))
-      .subscribe(_ => {
-        this.backtoArticleList()});
+      .subscribe({
+        next: _ => {
+          this.matSnackBar.open("Article créé", 'Close', { duration: 3000 });
+          this.backtoArticleList();
+        },
+        error: _ => this.matSnackBar.open("Erreur création", 'Close', { duration: 3000 })
+      });
   }
 
   backtoArticleList():void{

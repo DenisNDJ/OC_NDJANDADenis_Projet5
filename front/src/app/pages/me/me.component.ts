@@ -51,7 +51,7 @@ export class MeComponent  implements OnInit, OnDestroy{
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: _ => {
-          this.matSnackBar.open("Utilisateur Updated", 'Close', { duration: 3000 })
+          this.matSnackBar.open("Utilisateur Updated", 'Close', { duration: 3000 });
           this.ngOnInit();
         },
         error: _ => this.matSnackBar.open("Erreur de mise à jour", 'Close', { duration: 3000 }),
