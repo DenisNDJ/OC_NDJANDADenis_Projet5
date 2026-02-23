@@ -8,6 +8,10 @@
     padding-right: 3%;
     padding-bottom: 25px;
 }
+.comment_card{
+    max-width: 500px;
+    background-color: lightgrey;
+}
 
 .article-card-header{
     display: grid;
@@ -24,4 +28,42 @@
 .commentaire-list{
     height: 230px;
     overflow: scroll;
+}
+
+.comment_input{
+    width: 70%;
+}
+
+.comment_form{
+    justify-content: center;
+    display: flex;
+}
+
+.form_comment{
+    width: 100%;
+    display: inline;
+}
+
+#commentBtn-detail{
+    font-size: 50px;
+    padding-right: 15px;
+    background:none;
+    border:none;
+    transform: rotate(320deg);
+}
+
+#commentBtn-detail:enabled{
+    color: #7763C5;
+}
+
+.all_comment_container{
+    padding-top: 15px;
+}
+
+.line{
+  justify-self: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid black;
+  width: 100%;
 }

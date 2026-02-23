@@ -19,11 +19,16 @@
         </mat-card>}
     </div>
 
-    <div>
+    <div class="line"></div>
+
+    <div class="all_comment_container">
         <h1>Commentaires</h1>
         <div class="commentaire-list">
+            @if((comment$ | async)?.length == 0){
+                <h2>Aucun commentaire</h2>
+            } @else {
             @for (comment of (comment$ | async); track comment) {
-            <mat-card appearance="outlined">
+            <mat-card class="comment_card" appearance="outlined">
                 <mat-card-header>
                     <mat-card-title id="commentUser-detail">{{ comment.user.username }}</mat-card-title>
                 </mat-card-header>
@@ -32,16 +37,16 @@
                     {{ comment.content }}
                     </p>
                 </mat-card-content>    
-            </mat-card>}
+            </mat-card>}}
         </div>
-        <div>
-            <form class="mt2" fxLayout="column" [formGroup]="commentForm" (ngSubmit)="submit()">
-                <mat-form-field class="example-full-width">
-                    <mat-label>Leave a comment</mat-label>
-                    <textarea matInput id="commentInput-detail" placeholder="Ex. It makes me feel..." formControlName="content"></textarea>
+        <div class="comment_form" >
+            <form class="form_comment" [formGroup]="commentForm" (ngSubmit)="submit()">
+                <mat-form-field class="comment_input">
+                    <mat-label id="commentLabel-detail">Ecrivez votre commentaire</mat-label>
+                    <textarea matInput id="commentInput-detail" placeholder="Ex. Cette article est..." formControlName="content"></textarea>
                 </mat-form-field>
-                <button mat-raised-button id="commentBtn-detail" color="primary" [disabled]="commentForm.invalid" type="submit">
-                    Save
+                <button id="commentBtn-detail" color="primary" [disabled]="commentForm.invalid" type="submit">
+                    &#10146;
                 </button>
             </form>
         </div>
