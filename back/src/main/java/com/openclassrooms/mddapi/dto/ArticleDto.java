@@ -23,8 +23,8 @@ public class ArticleDto {
 	
 	private LocalDate date;
 	
-	private Users user;
+	private UsersDto user;
 	
-	private Theme theme;
+	private ThemeDto theme;
 
 }

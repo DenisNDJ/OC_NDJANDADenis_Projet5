@@ -2,9 +2,6 @@ package com.openclassrooms.mddapi.dto;
 
 import java.time.LocalDateTime;
 
-import com.openclassrooms.mddapi.models.Article;
-import com.openclassrooms.mddapi.models.Users;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,9 +12,9 @@ import lombok.NoArgsConstructor;
 public class CommentDto {	
     private String content;
 
-    private Users user;
+    private UsersDto user;
     
-    private Article article;
+    private ArticleDto article;
 
     private LocalDateTime date;
 }

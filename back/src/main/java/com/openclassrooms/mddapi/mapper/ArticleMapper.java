@@ -24,6 +24,7 @@ public class ArticleMapper {
 	
 	public ArticleDto toDto(Article article) {
 		ArticleDto articleDto = modelMapper.map(article, ArticleDto.class);
+		articleDto = cleanArticleDtoUser(articleDto);
 	    return articleDto;
 	}
 	
@@ -40,5 +41,11 @@ public class ArticleMapper {
 		Article article = modelMapper.map(articleDto, Article.class);
 		article.setUser(new Users(Long.parseLong(this.jwtService.extractUserIdFromHttpRequest(request))));
 	    return article;
+	}
+	
+	public ArticleDto cleanArticleDtoUser(ArticleDto articleDto) {
+		articleDto.getUser().setPassword("");
+		articleDto.getUser().setEmail("");
+		return articleDto;
 	}
 }

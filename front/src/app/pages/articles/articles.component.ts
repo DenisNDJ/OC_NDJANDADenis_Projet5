@@ -18,9 +18,10 @@ export class ArticlesComponent implements OnInit {
   private router = inject(Router);
   public sortIndex: boolean = false;
 
-  public article$: Observable<Article[]> = this.articleService.getSubscribed();
+  public article$!: Observable<Article[]>;
   
   ngOnInit(): void {
+    this.article$ = this.articleService.getSubscribed();
     this.sort();
   }
 
