@@ -1,0 +1,11 @@
+id,title,content,user,theme,date
+1,"Wiki Java","Java est un langage de programmation de haut niveau orienté objet créé par James Gosling et Patrick Naughton.",4,1,"2026-01-25 00:00:00"
+2,"Wiki Python","Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",4,2,"2026-01-25 00:00:00"
+3,"Wiki Python","Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",5,2,"2026-01-25 00:00:00"
+4,"Wiki Python","Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",4,1,"2026-01-25 00:00:00"
+17,"Le C#","C# est dérivé du C++ et très proche du Java dont il reprend la syntaxe générale ainsi que les concepts, y ajoutant des notions telles que la surcharge des opérateurs, les indexeurs (en) et les délégués. Il est utilisé notamment pour développer des applications web sur la plateforme ASP.NET, ainsi que des jeux vidéo avec les moteurs de jeux Unity et Godot[3].",5,5,"2026-02-03 12:44:53"
+18,"Le C","Le langage C est un langage de programmation impératif, généraliste et de bas niveau. Inventé au début des années 1970 pour réécrire Unix, le langage C est encore largement utilisé. De nombreux langages plus modernes comme C++, C#, Java et PHP ou JavaScript ont repris une syntaxe similaire au C et reprennent en partie sa logique. C offre au développeur une marge de contrôle importante sur la machine (notamment sur la gestion de la mémoire) et est de ce fait utilisé pour réaliser les « fondations » (compilateurs, interpréteurs, …) de ces langages plus modernes.",5,6,"2026-02-03 12:51:19"
+19,"Le c","J'adore le c",5,6,"2026-02-03 13:07:02"
+20,tesr,test,12,2,"2026-02-17 12:08:08"
+21,oui,deniss,12,4,"2026-02-17 15:33:21"
+22,de,de,12,5,"2026-02-17 00:00:00"

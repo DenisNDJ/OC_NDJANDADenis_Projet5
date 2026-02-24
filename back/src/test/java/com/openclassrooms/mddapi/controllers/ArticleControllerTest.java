@@ -11,6 +11,8 @@ import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 //import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -30,6 +32,7 @@ import com.openclassrooms.mddapi.dto.payload.LoginRequest;
 
 @SpringBootTest
 @ActiveProfiles("test")
+@Transactional
 @AutoConfigureMockMvc
 @DirtiesContext(classMode = ClassMode.BEFORE_CLASS)
 public class ArticleControllerTest {

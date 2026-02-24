@@ -13,6 +13,8 @@ import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.transaction.annotation.Transactional;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.mddapi.dto.payload.LoginRequest;
@@ -22,6 +24,7 @@ import com.openclassrooms.mddapi.repository.UserRepository;
 @SpringBootTest
 @ActiveProfiles("test")
 @AutoConfigureMockMvc
+@Transactional
 @DirtiesContext(classMode = ClassMode.BEFORE_CLASS)
 public class AuthControllerTest {
 	@Autowired
