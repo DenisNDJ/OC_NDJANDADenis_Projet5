@@ -1,4 +1,4 @@
-import { AbstractControl, MinLengthValidator, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 export function authValidator(): ValidatorFn {
     return (ctrl: AbstractControl): null | ValidationErrors => {
@@ -23,16 +23,19 @@ export function authValidator(): ValidatorFn {
 
 export function mePassValidator(): ValidatorFn {
     return (ctrl: AbstractControl): null | ValidationErrors => {
+        const valueCrt = ctrl.value;
 
-        const HasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(ctrl.value);
+        const HasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(valueCrt);
 
-        const hasUpperCase = /[A-Z]+/.test(ctrl.value);
+        const hasUpperCase = /[A-Z]+/.test(valueCrt);
 
-        const hasLowerCase = /[a-z]+/.test(ctrl.value);
+        const hasLowerCase = /[a-z]+/.test(valueCrt);
 
-        const hasNumeric = /[0-9]+/.test(ctrl.value);
+        const hasNumeric = /[0-9]+/.test(valueCrt);
 
-        const passwordValid = HasSpecialChar && hasUpperCase && hasLowerCase && hasNumeric;
+        const hasLength  = valueCrt.length > 7;
+
+        const passwordValid = HasSpecialChar && hasUpperCase && hasLowerCase && hasNumeric && hasLength;
 
         if(passwordValid || ctrl.value==""){
             return null;

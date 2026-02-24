@@ -43,7 +43,7 @@ export class FormComponent implements OnInit, OnDestroy{
       '',
       [
         Validators.required,
-        Validators.max(254)
+        Validators.maxLength(254)
       ]
     ]
   });
