@@ -21,6 +21,12 @@ Pour installer les dépendances frontend (à réaliser avant de lancer l'applica
 ## Base de donnée
 
 - Configurer un fichier application properties pour la connection avec la base de données.
+Format du document:
+DB_DATABASE=
+DB_TEST_DATABASE=
+DB_USER=
+DB_PASSWORD=
+API_KEY=
 - Utiliser le script dans 'back/src/main/ressources/sql' pour creer la base de données
 - Son nom est 'mdd_db'
 
