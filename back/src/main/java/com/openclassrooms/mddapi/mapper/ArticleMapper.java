@@ -30,17 +30,29 @@ public class ArticleMapper {
 	
 	public List<ArticleDto> toDto(List<Article> articleLst){
 		List<ArticleDto> articleDtoLst =  new ArrayList<ArticleDto>();
+		List<ArticleDto> returnArticleDtoLst =  new ArrayList<ArticleDto>();
 		
 		articleLst.forEach((article)->{
 			articleDtoLst.add(modelMapper.map(article, ArticleDto.class));
 		});
-		return articleDtoLst;
+		
+		returnArticleDtoLst = cleanLstArticleDtoUser(articleDtoLst);
+		
+		return returnArticleDtoLst;
 	}
 	
 	public Article convertToEntity(ArticleDto articleDto, HttpServletRequest request) throws ParseException {
 		Article article = modelMapper.map(articleDto, Article.class);
 		article.setUser(new Users(Long.parseLong(this.jwtService.extractUserIdFromHttpRequest(request))));
 	    return article;
+	}
+	
+	public List<ArticleDto> cleanLstArticleDtoUser(List<ArticleDto> articleDtoLst) {
+		List<ArticleDto> newLstArticleDto = new ArrayList<ArticleDto>();
+		articleDtoLst.forEach((articleDto)->{
+			newLstArticleDto.add(cleanArticleDtoUser(articleDto));
+		});
+		return newLstArticleDto;
 	}
 	
 	public ArticleDto cleanArticleDtoUser(ArticleDto articleDto) {

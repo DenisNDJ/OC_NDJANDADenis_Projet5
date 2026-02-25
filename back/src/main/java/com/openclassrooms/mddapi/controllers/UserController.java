@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.openclassrooms.mddapi.dto.UsersDto;
+import com.openclassrooms.mddapi.dto.payload.ResponseMessage;
+import com.openclassrooms.mddapi.exeption.BadRequestException;
 import com.openclassrooms.mddapi.mapper.UserMapper;
 import com.openclassrooms.mddapi.models.Users;
 import com.openclassrooms.mddapi.services.UserService;

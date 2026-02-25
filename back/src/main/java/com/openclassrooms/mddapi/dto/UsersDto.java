@@ -8,6 +8,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UsersDto {
+	public UsersDto(Long id) {
+		this.id = id;
+		this.email = "";
+		this.password = "";
+		this.username = "";
+	}
+	
+    private Long id;
+    
     private String username;
 
     private String email;

@@ -41,7 +41,6 @@ public class SpringSecurityConfig {
 	            		.requestMatchers(lstBypass).permitAll()
 	            		.anyRequest().authenticated())
 	            .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
-	            .httpBasic(Customizer.withDefaults())
 	            .build();       
 	}
 	

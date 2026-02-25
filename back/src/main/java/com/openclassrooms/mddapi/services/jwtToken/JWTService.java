@@ -32,7 +32,7 @@ public class JWTService {
 		return Jwts.builder()
 				.subject(String.valueOf(user.getId()))
 				.issuedAt(new Date(System.currentTimeMillis()))
-				.expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 24))
+				.expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24))
 				.signWith(getSignInKey(), SignatureAlgorithm.HS256)
 				.compact();
 	}
@@ -71,9 +71,8 @@ public class JWTService {
 		return SECRET_KEY;
 	}
 	
-	public boolean isTokenValid(String token, Users user) {
-		final String username = extractUserId(token);		
-		return (username.equals(String.valueOf(user.getId())) || isTokenExpired(token));
+	public boolean isTokenValid(String token, Users user) {	
+		return (!(user == null) && !isTokenExpired(token));
 	}
 
 	private boolean isTokenExpired(String token) {
