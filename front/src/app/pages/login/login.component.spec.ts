@@ -94,6 +94,6 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
 
     const errorMessage = document.getElementById('errorMes_login')!;
-    expect(errorMessage.textContent).toContain('An error occurred');
+    expect(errorMessage.textContent).toContain('Erreur de connexion');
   });
 });

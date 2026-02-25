@@ -100,7 +100,7 @@ describe('RegisterComponent', () => {
 
     fixture.detectChanges();
     const errorMessage = document.getElementById('errorMes_register')!;
-    expect(errorMessage.textContent).toContain('An error occurred');
+    expect(errorMessage.textContent).toContain('Erreur d\'inscription');
   });
 
 });

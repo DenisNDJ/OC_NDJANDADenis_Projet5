@@ -117,14 +117,14 @@ public class ArticleControllerTest {
 				            	.contentType(MediaType.APPLICATION_JSON)
 				    	        .characterEncoding("utf-8")
 				    	        .header("Authorization", "fake_token"))
-				            	.andExpect(status().isUnauthorized())
+				            	.andExpect(status().isForbidden())
 				            	.andReturn();
         
 		MvcResult mockResponse_2 = mockMvc.perform(get("/api/article/subscribed")
 				            	.contentType(MediaType.APPLICATION_JSON)
 				    	        .characterEncoding("utf-8")
 				    	        .header("Authorization", wrongToken))
-				            	.andExpect(status().isUnauthorized())
+				            	.andExpect(status().isForbidden())
 				            	.andReturn();
     
 	}
